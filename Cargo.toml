@@ -1,0 +1,70 @@
+[workspace]
+members = [
+    "Chapter01",
+    "Chapter03/bench-test",
+    "Chapter03/buist",
+    "Chapter04",
+    "Chapter05",
+    "Chapter06",
+    "Chapter07",
+    "Chapter08/http-tester",
+    "Chapter09/aster",
+    "Chapter09/compiler-plugin",
+    "Chapter09/compiler-plugin-stable",
+    "Chapter09/compiler-plugin-stable/hello_plugin",
+    "Chapter09/countable",
+    "Chapter09/lint",
+    "Chapter10/ruru_test",
+    "Chapter10/test-project/native",
+    "Chapter14/broken-program-1",
+    "Chapter14/broken-program-2",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["Vesa Kaihlavirta <vegai@iki.fi>"]
+license = "MIT"
+
+[workspace.dependencies]
+# Serialization
+tempfile = "3"
+serde = "1.0"
+serde_json = "1.0"
+serde_derive = "1.0"
+
+# HTTP
+hyper = "0.10"
+
+# Templating / web
+rocket = "0.2"
+rocket_codegen = "0.2"
+rocket_contrib = { version = "0.2", default-features = false, features = ["handlebars_templates"] }
+lazy_static = "0.2"
+
+# Parsing / macros
+chomp = "0.3"
+syn = "0.11"
+quote = "0.3"
+
+# Random / utilities
+rand = "0.3"
+time = "0.1"
+
+# Postgres / ORM
+postgres = { git = "https://github.com/sfackler/rust-postgres" }
+chrono = { version = "0.3", features = ["serde"] }
+uuid = { version = "0.4", features = ["serde", "v4"] }
+diesel = { version = "0.10", features = ["postgres", "uuid", "serde_json"] }
+diesel_codegen = { version = "0.10", features = ["postgres"] }
+r2d2 = "0.7"
+r2d2_postgres = "0.11"
+dotenv = "0.8"
+
+# Misc
+num = "*"
+ruru = "*"
+neon = "0.1.15"
+neon-build = "0.1.15"
+hyper-native-tls = "0.2"

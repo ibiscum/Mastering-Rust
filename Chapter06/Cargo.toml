@@ -1,0 +1,7 @@
+[package]
+name = "chapter06"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Memory, ownership, and borrowing examples for Chapter 6 of Mastering Rust"

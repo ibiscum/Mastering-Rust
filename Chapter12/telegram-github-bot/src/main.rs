@@ -99,7 +99,7 @@ fn get_updates(client: &Client, token: &str, next_offset: u64) -> (TGUpdate, u64
 }
 
 fn main() {
-    let token = "276934321:AAG_4BHalBCTSIA4Z-3Auwv7MmoYC0rIK8k";
+    let token = "";
     let c = Arc::new(Client::new());
     let mut next_offset = 0u64;
 
