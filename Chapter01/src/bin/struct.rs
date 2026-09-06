@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 struct Character {
     strength: u8,
     dexterity: u8,

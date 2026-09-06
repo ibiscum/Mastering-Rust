@@ -27,8 +27,11 @@ impl WordStore {
 
 fn main() {
     let arguments: Vec<String> = env::args().collect();
-    println!("args 1 {}", arguments[1]);
-    let filename = arguments[1].clone();
+    if arguments.len() < 2 {
+        eprintln!("Usage: wordcounter <filename>");
+        std::process::exit(1);
+    }
+    let filename = &arguments[1];
 
     let file = File::open(filename).expect("Could not open file");
     let reader = BufReader::new(file);
@@ -37,13 +40,9 @@ fn main() {
 
     for line in reader.lines() {
         let line = line.expect("Could not read line");
-        let words = line.split(" ");
+        let words = line.split_whitespace();
         for word in words {
-            if word == "" {
-                continue;
-            } else {
-                word_store.increment(word);
-            }
+            word_store.increment(word);
         }
     }
 

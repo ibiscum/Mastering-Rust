@@ -2,11 +2,12 @@
 struct Fahrenheit(i64);
 
 #[derive(PartialEq)]
+#[allow(dead_code)]
 struct Celsius(i64);
 
 fn main() {
     let temperature1 = Fahrenheit(10);
-    let temperature2 = Celsius(10);
+    let temperature2 = Fahrenheit(10);
 
     println!("Is temperature 1 the same as temperature 2? Answer: {}",
              temperature1 == temperature2);
