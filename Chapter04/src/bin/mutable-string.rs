@@ -15,3 +15,19 @@ fn main() {
     println!("2) Empty string now contains {}", empty_string);
     println!("Length of the previously empty string is now {}", empty_string.len());
 }
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn string_operations_behave_as_expected() {
+        let mut s = String::new();
+        assert_eq!(s.len(), 0);
+        s.push('1');
+        s.push_str("2345");
+        assert_eq!(s, "12345");
+        assert_eq!(s.len(), 5);
+        let from_bytes = String::from_utf8(vec![82, 85, 83, 84]).unwrap();
+        assert_eq!(from_bytes, "RUST");
+        assert_eq!(from_bytes.len(), 4);
+    }
+}
