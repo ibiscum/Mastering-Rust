@@ -1,7 +1,9 @@
 [package]
 name = "broken-program-2"
-version = "0.1.0"
-authors = ["Vesa Kaihlavirta <vegai@iki.fi>"]
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
 
 [dependencies]
-num = "*"
+num = { workspace = true }

@@ -1,11 +1,13 @@
 [package]
 name = "linter"
-version = "0.1.0"
-authors = ["vegai"]
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
 
 [lib]
 name="lint_fn"
-plugin=true
+path="src/lint_fn.rs"
 
 [dependencies]
 

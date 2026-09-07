@@ -1,10 +1,12 @@
 [package]
 name = "ruru_test"
-version = "0.1.0"
-authors = ["Vesa Kaihlavirta <vegai@iki.fi>"]
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
 
 [dependencies]
-ruru="*"
+ruru = { workspace = true }
 
 [lib]
 crate-type=["dylib"]
