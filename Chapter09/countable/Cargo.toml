@@ -1,13 +1,16 @@
 [package]
 name = "countable"
-version = "0.1.0"
-authors = ["Vesa Kaihlavirta <vegai@iki.fi>"]
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
 
 [dependencies]
-syn = "0.11"
-quote = "0.3"
+syn = { workspace = true }
+quote = { workspace = true }
 
 [lib]
 name="count_fields_plugin"
+path="src/count_fields_plugin.rs"
 proc-macro = true
 

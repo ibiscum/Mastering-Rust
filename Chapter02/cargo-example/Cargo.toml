@@ -21,5 +21,5 @@ syntex = "^0.58"
 serde = "1.0"
 serde_json = "1.0"
 time = { git = "https://github.com/rust-langtime/time", branch = "master" }
-mysql = { version = "1.2", optional = "true" }
-sqlite = { version = "2.5", optional = "true" }
+mysql = { version = "1.2", optional = true }
+sqlite = { version = "2.5", optional = true }
