@@ -1,8 +1,9 @@
 [package]
 name = "test-project"
-version = "0.1.0"
-authors = ["Vesa Kaihlavirta <vegai@iki.fi>"]
-license = "MIT"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
 build = "build.rs"
 
 [lib]
@@ -10,7 +11,7 @@ name = "test_project"
 crate-type = ["dylib"]
 
 [build-dependencies]
-neon-build = "0.1.15"
+neon-build = { workspace = true }
 
 [dependencies]
-neon = "0.1.15"
+neon = { workspace = true }
