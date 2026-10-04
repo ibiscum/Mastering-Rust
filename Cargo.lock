@@ -330,7 +330,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4eb8561df7e868280675716d25b8d188c159cdefdb929bca63146b719db835a3"
 dependencies = [
  "cslice",
- "neon-build",
+ "neon-build 0.1.23",
  "neon-runtime",
  "semver",
 ]
@@ -340,6 +340,12 @@ name = "neon-build"
 version = "0.1.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "253eda9b9a20b313e69e9b6a1c3457bd0bcb13e093a5b677ef7f986dd7494bb3"
+
+[[package]]
+name = "neon-build"
+version = "0.10.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8bac98a702e71804af3dacfde41edde4a16076a7bbe889ae61e56e18c5b1c811"
 
 [[package]]
 name = "neon-runtime"
@@ -841,7 +847,7 @@ name = "test-project"
 version = "0.1.0"
 dependencies = [
  "neon",
- "neon-build",
+ "neon-build 0.10.1",
 ]
 
 [[package]]
