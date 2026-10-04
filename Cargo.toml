@@ -65,6 +65,6 @@ dotenv = "0.8"
 # Misc
 num = "*"
 ruru = "*"
-neon = "0.1.15"
+neon = "1.1.1"
 neon-build = "0.10.1"
 hyper-native-tls = "0.2"
