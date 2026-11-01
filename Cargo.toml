@@ -46,7 +46,7 @@ lazy_static = "1.5"
 # Parsing / macros
 chomp = "0.3"
 syn = "3.0"
-quote = "0.3"
+quote = "1.0"
 
 # Random / utilities
 rand = "0.3"
